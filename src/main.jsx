@@ -9,6 +9,7 @@ import {
 import ErrorPage from './Component/ErrorPage/ErrorPage';
 import Root from './Root/Root';
 import Home from './Pages/Home/Home';
+import HomeDtls from './Pages/HomeDtls/HomeDtls';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -17,7 +18,16 @@ const router = createBrowserRouter([
     children :[
       {
         path: "/",
-        element: <Home></Home>
+        element: <Home></Home> 
+
+      },
+      {
+        
+                  
+          path: '/SingleHome/:id',
+          element: <HomeDtls></HomeDtls>,
+          loader :   ()=>fetch('/Home.json')
+      
       }
     ] 
   },

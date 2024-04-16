@@ -9,7 +9,7 @@
       "area": "2000 sq ft",
       "location": "123 Main St, Anytown, USA",
       "facilities": ["living room", "kitchen", "backyard"],
-      "image": "path/to/image1.jpg",
+      "image": "https://i.ibb.co/gD83Lr0/istockphoto-1297933338-1024x1024.jpg",
       "button_text": "View Property"
     },
     {
@@ -22,7 +22,7 @@
       "area": "1200 sq ft",
       "location": "456 Elm St, Cityville, USA",
       "facilities": ["swimming pool", "gym", "parking"],
-      "image": "path/to/image2.jpg",
+      "image": "https://i.ibb.co/j4b4V9s/istockphoto-1393537665-1024x1024.jpg",
       "button_text": "View Property"
     },
     {
@@ -35,7 +35,7 @@
       "area": "2500 sq ft",
       "location": "789 Oak St, Suburbia, USA",
       "facilities": ["living room", "balcony", "garage"],
-      "image": "path/to/image3.jpg",
+      "image": "https://i.ibb.co/GCWJtNQ/istockphoto-175767618-1024x1024.jpg",
       "button_text": "View Property"
     },
     {
@@ -48,7 +48,7 @@
       "area": "Varies",
       "location": "321 Maple Ave, Retireville, USA",
       "facilities": ["community center", "medical services", "landscaped gardens"],
-      "image": "path/to/image4.jpg",
+      "image": "https://i.ibb.co/zRHxgW8/istockphoto-1303798224-1024x1024.jpg",
       "button_text": "View Property"
     },
     
@@ -63,7 +63,7 @@
           "area": "3000 sq ft",
           "location": "789 Ocean Blvd, Paradise Island",
           "facilities": ["private beach access", "pool", "gourmet kitchen"],
-          "image": "path/to/image5.jpg",
+          "image": "https://i.ibb.co/DpXzrb3/istockphoto-528487340-1024x1024.jpg",
           "button_text": "View Property"
         },
         {
@@ -76,7 +76,7 @@
           "area": "1000 sq ft",
           "location": "101 University Ave, College Town, USA",
           "facilities": ["study lounge", "fitness center", "laundry facilities"],
-          "image": "path/to/image6.jpg",
+          "image": "https://i.ibb.co/18n8dX1/istockphoto-530194388-1024x1024.jpg",
           "button_text": "View Property"
         }
       
@@ -90,7 +90,7 @@
             "area": "1200 sq ft",
             "location": "456 Elderly Dr, Seniorsville, USA",
             "facilities": ["24/7 care staff", "dining hall", "activity rooms"],
-            "image": "path/to/image7.jpg",
+            "image": "https://i.ibb.co/F5vt1Cc/istockphoto-1045351808-1024x1024.jpg",
             "button_text": "View Property"
           },
           {
@@ -103,7 +103,7 @@
             "area": "1800 sq ft",
             "location": "789 Maple Ln, Suburbia, USA",
             "facilities": ["backyard", "garage", "spacious rooms"],
-            "image": "path/to/image8.jpg",
+            "image": "https://i.ibb.co/qWBWKcm/istockphoto-1560745231-1024x1024.jpg",
             "button_text": "View Property"
           },
           {
@@ -116,7 +116,7 @@
             "area": "1500 sq ft",
             "location": "123 Urban Ave, Metropolis, USA",
             "facilities": ["open floor plan", "rooftop terrace", "modern appliances"],
-            "image": "path/to/image9.jpg",
+            "image": "   https://i.ibb.co/ZmjsgKy/istockphoto-488120139-1024x1024.jpg ",
             "button_text": "View Property"
           }
       
