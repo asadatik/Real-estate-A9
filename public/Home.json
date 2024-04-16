@@ -1,0 +1,125 @@
+[
+    {
+      "id": 1,
+      "estate_title": "Cozy Single-Family Home",
+      "segment_name": "Single-family home",
+      "description": "Charming single-family home with modern amenities.",
+      "price": "$300,000",
+      "status": "sale",
+      "area": "2000 sq ft",
+      "location": "123 Main St, Anytown, USA",
+      "facilities": ["living room", "kitchen", "backyard"],
+      "image": "path/to/image1.jpg",
+      "button_text": "View Property"
+    },
+    {
+      "id": 2,
+      "estate_title": "Downtown Apartment",
+      "segment_name": "Apartment",
+      "description": "Luxurious apartment in the heart of the city.",
+      "price": "$2,000/month",
+      "status": "rent",
+      "area": "1200 sq ft",
+      "location": "456 Elm St, Cityville, USA",
+      "facilities": ["swimming pool", "gym", "parking"],
+      "image": "path/to/image2.jpg",
+      "button_text": "View Property"
+    },
+    {
+      "id": 3,
+      "estate_title": "Townhouse with a View",
+      "segment_name": "Townhouse",
+      "description": "Spacious townhouse with scenic views.",
+      "price": "$400,000",
+      "status": "sale",
+      "area": "2500 sq ft",
+      "location": "789 Oak St, Suburbia, USA",
+      "facilities": ["living room", "balcony", "garage"],
+      "image": "path/to/image3.jpg",
+      "button_text": "View Property"
+    },
+    {
+      "id": 4,
+      "estate_title": "Senior Living Community",
+      "segment_name": "Senior living community",
+      "description": "Retirement community with various amenities and services.",
+      "price": "Contact for pricing",
+      "status": "sale",
+      "area": "Varies",
+      "location": "321 Maple Ave, Retireville, USA",
+      "facilities": ["community center", "medical services", "landscaped gardens"],
+      "image": "path/to/image4.jpg",
+      "button_text": "View Property"
+    },
+    
+    
+        {
+          "id": 5,
+          "estate_title": "Luxury Vacation Rental",
+          "segment_name": "Vacation rental",
+          "description": "Stunning beachfront villa for your dream vacation.",
+          "price": "$500/night",
+          "status": "rent",
+          "area": "3000 sq ft",
+          "location": "789 Ocean Blvd, Paradise Island",
+          "facilities": ["private beach access", "pool", "gourmet kitchen"],
+          "image": "path/to/image5.jpg",
+          "button_text": "View Property"
+        },
+        {
+          "id": 6,
+          "estate_title": "Student Housing Complex",
+          "segment_name": "Student housing",
+          "description": "Modern student apartments near campus.",
+          "price": "$800/month",
+          "status": "rent",
+          "area": "1000 sq ft",
+          "location": "101 University Ave, College Town, USA",
+          "facilities": ["study lounge", "fitness center", "laundry facilities"],
+          "image": "path/to/image6.jpg",
+          "button_text": "View Property"
+        }
+      
+       ,{
+            "id": 7,
+            "estate_title": "Senior Living Apartments",
+            "segment_name": "Senior living community",
+            "description": "Modern senior apartments with assisted living services.",
+            "price": "$3,500/month",
+            "status": "rent",
+            "area": "1200 sq ft",
+            "location": "456 Elderly Dr, Seniorsville, USA",
+            "facilities": ["24/7 care staff", "dining hall", "activity rooms"],
+            "image": "path/to/image7.jpg",
+            "button_text": "View Property"
+          },
+          {
+            "id": 8,
+            "estate_title": "Cosy Suburban Townhouse",
+            "segment_name": "Townhouse",
+            "description": "Comfortable townhouse nestled in a quiet suburban neighborhood.",
+            "price": "$250,000",
+            "status": "sale",
+            "area": "1800 sq ft",
+            "location": "789 Maple Ln, Suburbia, USA",
+            "facilities": ["backyard", "garage", "spacious rooms"],
+            "image": "path/to/image8.jpg",
+            "button_text": "View Property"
+          },
+          {
+            "id": 9,
+            "estate_title": "City Center Loft",
+            "segment_name": "Apartment",
+            "description": "Stylish loft apartment in the bustling city center.",
+            "price": "$450,000",
+            "status": "sale",
+            "area": "1500 sq ft",
+            "location": "123 Urban Ave, Metropolis, USA",
+            "facilities": ["open floor plan", "rooftop terrace", "modern appliances"],
+            "image": "path/to/image9.jpg",
+            "button_text": "View Property"
+          }
+      
+      
+  ]
+  
