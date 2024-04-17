@@ -1,10 +1,14 @@
+import { Helmet } from "react-helmet-async";
 import Estate from "../../Component/Estate/Estate";
 import Cursole from "../../Component/Swiper/Cursole";
 
 
 const Home = () => {
     return (
-        <div  className="my-10"  >
+        <div  className="my-10"  >   
+            <Helmet>
+             <title    >Home </title>
+            </Helmet>
             <Cursole></Cursole>  
             <Estate></Estate>   
         </div>
