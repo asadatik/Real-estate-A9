@@ -12,11 +12,11 @@ export const AuthContext = createContext(null) ;
 
 const AuthProvider = ({children}) => {
     const [user,setuser] = useState(null);  
-    console.log(user);
+    console.log(user);         
     const [loading, setLoading] = useState(true);
-// //////////////////////////////////
+// //////////////////////////////////register
 
-     const Creatuser = (email,passowrd)=>{
+     const Creatuser= (email,passowrd)=>{
       setLoading(true)
      return createUserWithEmailAndPassword(   auth,email,passowrd);
     }  

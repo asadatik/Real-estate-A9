@@ -2,6 +2,8 @@
 import { Link } from "react-router-dom";
 
 
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 
 
@@ -11,7 +13,8 @@ import { Link } from "react-router-dom";
 
 const Register = () => {             
 
-  
+  const{ Creatuser , updatedUserProfile} = useContext(AuthContext);
+    
 
     const HandleLogin=(e)=>{
         e.preventDefault()
@@ -23,10 +26,9 @@ const Register = () => {
           const  password =  (from.get('password'))
           console.log(Name,Photo,email,password); 
         /////// create User //// ///////////
-                (email,password,Name,Photo) 
+               Creatuser(email,password,Name,Photo) 
            .then( Result=>  {
-                //   updatedUserProfile(Name,Photo)
-          
+            updatedUserProfile(Name,Photo)
               console.log(Result.user) 
            }     )
            .catch(error=>{
@@ -41,7 +43,7 @@ const Register = () => {
      
          
        <div className="mx-auto w-1/2 mt-8 ">
-       <h1 className="text-3xl text-center"  >Login here</h1> 
+       <h1 className="text-3xl text-center"  >  Create An Account</h1> 
             <form onSubmit={HandleLogin} className="card-body">
             <div className="form-control">
         <label className="label">
