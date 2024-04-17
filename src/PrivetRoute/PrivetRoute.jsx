@@ -11,14 +11,17 @@ const PrivetRoute = ({children}) => {
   const {user,loading} = useContext(AuthContext);
   console.log(user)
    if(  loading ) {
-     return <h1> loading..........</h1>      
+      return  <div  className=" mt-20 flex justify-center   "  >
+           <span className="loading loading-bars loading-sm"></span>
+     <span className="loading loading-bars loading-md"></span>
+     <span className="loading loading-bars loading-lg"></span>  </div>      
    } 
-
-     if(user)   {
+                 
+     if(user)   {    
         return children 
      }
   
-    return <Navigate state={location.pathname}  to='/login' >    </Navigate>
+    return <Navigate state={location.pathname}  to='/login' >    </Navigate> 
 
 
 

@@ -8,87 +8,88 @@ import auth from "../FireBase/FireBase.config";
 
 
 
-export const AuthContext = createContext(null) ;
+export const AuthContext = createContext(null);
 
-const AuthProvider = ({children}) => {
-    const [user,setuser] = useState(null);  
-    console.log(user);         
-    const [loading, setLoading] = useState(true);
-// //////////////////////////////////register
+const AuthProvider = ({ children }) => {
+  const [user, setuser] = useState(null);
+  console.log(user);
+  const [loading, setLoading] = useState(true);
+  // //////////////////////////////////register
 
-     const Creatuser= (email,passowrd)=>{                                                          
-      setLoading(true)
-     return createUserWithEmailAndPassword(   auth,email,passowrd);
-    }  
-// //////////////////////////   updated profile
-
-const updatedUserProfile = (name,image)=>{
-updateProfile(auth.currentUser, {
-displayName: name, 
-photoURL: image
-}).then((   ) => {
-
-}).catch((error) => {
-     console.error(error)
-});
-}
-
-// ////////////////////////
-  const login =(email,passowrd)=>{
+  const Creatuser = (email, passowrd) => {
     setLoading(true)
-          return signInWithEmailAndPassword( auth,email,passowrd  )
+    return createUserWithEmailAndPassword(auth, email, passowrd);
+  }
+  // /////////////////////////////// updated  ///////
+
+  const updatedUserProfile = (name, image) => {           
+    updateProfile(auth.currentUser, {
+      displayName: name,
+      photoURL: image
+    }).then(() => {
+                  
+    }).catch((error) => {
+      console.error(error) 
+    });
+  }
+                                      
+  // //////////////////////////////////////////////
+  const login = (email, passowrd) => {
+    setLoading(true)
+    return signInWithEmailAndPassword(auth, email, passowrd)          
   }
 
-// //////////////////////////////////
-const LogOut = ()=>{
+  // /////////////////////////////////////////////
+  const LogOut = () => {
 
-return   signOut(auth)
-}
-// //////////////////////////////
-// Social provider 
-const GoogleProvider = new GoogleAuthProvider();    
+    return signOut(auth)
+  }
+  // //////////////////////////////
+  // Social provider 
+  const GoogleProvider = new GoogleAuthProvider();
 
-const googleLogin=()=>{
-return signInWithPopup(auth,GoogleProvider)
-}
+  const googleLogin = () => {
+    return signInWithPopup(auth, GoogleProvider)
+  }
 
 
-// ////////////////////////////
-// observeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-    
-useEffect( ()=>{
-const Unsubscribe = onAuthStateChanged(auth, (Cuuretuser) => {
-    
-        setuser(Cuuretuser)
-        setLoading (false)
-       
-      
-        
-  });
- return ()=>{
+  // ////////////////////////////
+  // observeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+
+  useEffect(() => {
+    const Unsubscribe = onAuthStateChanged(auth, (Cuuretuser) => {
+
+      setuser(Cuuretuser)
+      setLoading(false)
+
+
+
+    });
+    return () => {
       Unsubscribe()
- } 
-},
-[] )         
-   
-const AuthInfo = {
-user,
-loading,
-Creatuser,
-login,
-LogOut,
-googleLogin,
-updatedUserProfile }
+    }
+  },
+    [])
+
+  const AuthInfo = {
+    user,
+    loading,
+    Creatuser,
+    login,
+    LogOut,
+    googleLogin,
+    updatedUserProfile
+  }
 
 
 
-return (
-<AuthContext.Provider value={AuthInfo}  >
-  
-  {children}
+  return (
+    <AuthContext.Provider value={AuthInfo}  >
 
-</AuthContext.Provider>
-);
+      {children}
+
+    </AuthContext.Provider>
+  );
 };
 
 export default AuthProvider;
