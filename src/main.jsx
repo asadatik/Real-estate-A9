@@ -50,7 +50,9 @@ const router = createBrowserRouter([
     },
     {
       path: "info",
-       element: <Userinfo></Userinfo>
+       element: <PrivetRoute>
+                        <Userinfo></Userinfo>
+                </PrivetRoute>
                
     }
     ] 

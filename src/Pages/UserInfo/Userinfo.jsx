@@ -12,7 +12,7 @@ const Userinfo = () => {
     return (
         <div className="hero lg:mt-16  rounded-3xl bg-base-200">
   <div className="hero-content flex-col  lg:gap-16   lg:flex-row">
-    <img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" className="max-w-sm rounded-xl shadow-2xl" />
+    <img src={user.photoURL} className=" w-40  rounded-xl shadow-2xl" />    
     <div>
       <h1 className="lg:text-2xl font-medium "> User  Name : {user.displayName} </h1> 
       <p  className="lg:text- 2xl font-medium   my-5 "  >  Email Address : {user.email}                                   </p>
