@@ -22,10 +22,20 @@ import { EffectCoverflow, Pagination } from 'swiper/modules';
 const Cursole = () => {
    
     return (
-        <div>
-    
-         
+        <div className='grid  rounded-2xl bg-base-200 md:grid-cols-2  lg:grid-cols-3  gap-5 '  >
+              <div className='   lg:pt-28 '  >
+                      <p  className='text-center  text-2xl font-bold text-emerald-500 ' >Modern Apartment In A New Residential Complex.
+                                                                             </p>
+                    <p className='text-center  text-lg my-3  '  >Allow us to guide you through the innovative stress free approach in finding your dream Properties.</p>
+                      <div className='  lg:flex gap-5  justify-center '   >
+                      <button className="btn btn-outline  btn-secondary">Get Start now</button>
+                      <button className="btn btn-outline   btn-warning">learn more</button>
 
+                      </div>
+            
+              </div>
+                 
+            <div className='  lg:col-span-2' >
              <Swiper
         effect={'coverflow'}
         grabCursor={true}
@@ -61,8 +71,8 @@ const Cursole = () => {
           <img  className='w-full  h-[500px]'  src="https://i.ibb.co/g9gT5h7/modern-residential-district-with-green-roof-balcony-generated-by-ai.jpg" />  />
         </SwiperSlide>
         
-      </Swiper>
-
+            </Swiper>
+            </div>
         </div>
     );
 };
