@@ -1,13 +1,14 @@
-import { Link ,useLocation ,useNavigate} from "react-router-dom";
+import { Link ,useLocation,useNavigate} from "react-router-dom";
 
 
 import { AuthContext } from "../../Provider/AuthProvider";
 import { useContext } from "react";
+import { Helmet } from "react-helmet-async";
 
 
 
-const Login = () => {       
-
+     const Login = () => {        
+        <Helmet> <title> Login </title> </Helmet>
     const{login, googleLogin} = useContext(AuthContext);
 
     const Location = useLocation();

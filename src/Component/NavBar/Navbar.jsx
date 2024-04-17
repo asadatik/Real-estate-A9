@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
-
+import userDefaultPic from '../../assets/user.png';
 const Navbar = () => {  
   
   const{user,LogOut} = useContext(AuthContext);
@@ -38,26 +38,22 @@ const Navbar = () => {
           
           </ul>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end space-x-2 "> 
        
-        {
-                  user&& <p>{user.email}</p>  
-                  }
                  {
-                    user ?  <div className="tooltip tooltip-bottom " data-tip={user.displayName?user.displayName:'user name not found'}>
-                   <button>    { user.photoURL&&<img className="w-10  rounded-full  " src={user.photoURL} 
-                alt="" />  }  </button>
-                            </div> 
+                    user? <div className="tooltip tooltip-bottom " data-tip={user.displayName?user.displayName:'user name not found'}>
+                   <button>    { user.photoURL?<img className="w-12  rounded-full  " src={user.photoURL} 
+                alt="" /> :  <img className="w-12 rounded-full "  src={userDefaultPic}  />  }   </button>
+                       </div> 
                      :
                   
-                   <label  tabIndex={0} className="btn tooltip  btn-ghost btn-circle avatar">
-                    <div className="w-10 rounded-full">
-                        
-                    </div>
-                  </label>}
+                   <label  tabIndex={0} className="btn tooltip  btn-ghost btn-circle avatar">  
+                             
+                  </label>
+                }
                 {
-                    user ? <button onClick={signOut}>Sign Out</button> 
-                    :   <a className="text-xl text-white mx-8  " >    <NavLink  to="/login"  > Login    </NavLink></a>
+                    user ? <Link onClick={signOut} className="  p-1  rounded-xl bg-orange-500 text-white  text-lg  "  >Sign Out</Link> 
+                    :   <a className="text-xl text-white mx-8  " >    <NavLink  to="/login"> Login    </NavLink></a>   
                    
                 }
                

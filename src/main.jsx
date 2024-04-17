@@ -14,6 +14,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import AuthProvider from './Provider/AuthProvider';
 import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
+import PrivetRoute from './PrivetRoute/PrivetRoute';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
         
       {         
           path: '/SingleHome/:id',
-          element: <HomeDtls></HomeDtls>,
+          element:   <PrivetRoute> <HomeDtls></HomeDtls></PrivetRoute>,   
           loader :   ()=>fetch('/Home.json')
       },
       {

@@ -1,9 +1,10 @@
 
-import { Link } from "react-router-dom";
+import { Link ,useNavigate,useLocation} from "react-router-dom";
 
 
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -12,9 +13,16 @@ import { AuthContext } from "../../Provider/AuthProvider";
 
 
 const Register = () => {             
-
+  <Helmet> <title> Register </title> </Helmet>
   const{ Creatuser , updatedUserProfile} = useContext(AuthContext);
     
+  const Location = useLocation();
+    
+  console.log("Location in the login page",Location);
+
+  const Navigate =  useNavigate();   
+
+     
 
     const HandleLogin=(e)=>{
         e.preventDefault()
@@ -29,6 +37,7 @@ const Register = () => {
                Creatuser(email,password,Name,Photo) 
            .then( Result=>  {
             updatedUserProfile(Name,Photo)
+            Navigate(  Location?.state ? Location.state : '/' )    
               console.log(Result.user) 
            }     )
            .catch(error=>{
