@@ -52,23 +52,23 @@ const Register = () => {
      
          
        <div className="mx-auto w-1/2 mt-8 ">
-       <h1 className="text-3xl text-center"  >  Create An Account</h1> 
+       <h1 className="text-3xl font-bold text-center"  >  Create An Account</h1> 
             <form onSubmit={HandleLogin} className="card-body">
             <div className="form-control">
         <label className="label">
-        <span className="label-text">Name</span>
+        <span className="label-text"> Your  Name</span>
       </label>
       <input type="text"  placeholder="Your Name"  name="name" className="input input-bordered" required />
     </div>
     <div className="form-control">
       <label className="label">
-        <span className="label-text">photo</span>
+        <span className="label-text"> Your  photo Url  </span>
       </label>
       <input type="text" placeholder="photo url"  name="photo" className="input input-bordered" required />
     </div>
     <div className="form-control">
       <label className="label">
-        <span className="label-text">Email</span>
+        <span className="label-text">   Email</span>
       </label>
       <input type="email" placeholder="email"  name="email" className="input input-bordered" required />
     </div>
@@ -82,10 +82,10 @@ const Register = () => {
       </label>
     </div>
     <div className="form-control mt-6">
-      <button className="btn btn-primary">Register</button>
+      <button className="btn btn-secondary">Register</button>       
     </div>
   </form>
-    <h1>Already have an Account ? < Link to='/login' className="text-lime-600" >Login</Link></h1>
+      <h1 className="text-center text-lg  "  >Already have an Account ? < Link to='/login' className="text-lime-600" >Login</Link></h1>
  </div>
     </div>
     );
