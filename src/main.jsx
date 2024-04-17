@@ -16,6 +16,7 @@ import Login from './Pages/Login/Login';
 import Register from './Pages/Register/Register';
 import PrivetRoute from './PrivetRoute/PrivetRoute';
 import Updated from './Pages/Updated/Updated';
+import Userinfo from './Pages/UserInfo/Userinfo';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -42,10 +43,15 @@ const router = createBrowserRouter([
         element:   <Register></Register>
     },
     {
-      path: "updated",
+      path: "/updated",
       element:      <PrivetRoute>
                      <Updated></Updated> 
                    </PrivetRoute>
+    },
+    {
+      path: "info",
+       element: <Userinfo></Userinfo>
+               
     }
     ] 
   },
