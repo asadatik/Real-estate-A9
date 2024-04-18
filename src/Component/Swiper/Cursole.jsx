@@ -22,17 +22,17 @@ import { EffectCoverflow, Pagination } from 'swiper/modules';
 const Cursole = () => {
    
     return (
-        <div className='grid  rounded-2xl bg-base-200 md:grid-cols-2  lg:grid-cols-3  gap-5 '  >
-              <div className='   lg:pt-28 '  >
+        <div className='grid  rounded-2xl bg-base-200 md:grid-cols-2  lg:grid-cols-3 '  >
+              <div className='  bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500    lg:pt-28 '  >
                       <p   
                             data-aos="zoom-out-left"  
                             data-aos-duration="1000"
-                      className='text-center  text-2xl font-bold text-emerald-500 ' >Modern Apartment In A New Residential Complex.
+                      className='text-center  text-2xl font-bold text-white ' >Modern Apartment In A New Residential Complex.
                                                                              </p>
                     <p data-aos="zoom-out-right" 
                     data-aos-duration="1500"
                        
-                     className='text-center  text-lg my-3  '  >Allow us to guide you through the innovative stress free approach in finding your dream Properties.</p>
+                     className='text-center  text-lg m-3   '  >Allow us to guide you through the innovative stress free approach in finding your dream Properties.</p>
                       <div className='  lg:flex gap-5  justify-center '   >
                       <button  data-aos="fade-up-right"
                        data-aos-duration="3000"
