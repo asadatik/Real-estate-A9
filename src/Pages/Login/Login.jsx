@@ -6,6 +6,8 @@ import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import { MdEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
+import 'animate.css';
+
 
 import Swal from 'sweetalert2'
 import 'react-toastify/dist/ReactToastify.css';
@@ -28,7 +30,7 @@ import 'react-toastify/dist/ReactToastify.css';
           .then(result =>  {
           console.log(result.user) 
         
-          // Navigate(  Location?.state ? Location.state : '/' )
+          Navigate(  Location?.state ? Location.state : '/' )
           } )
           }
     
@@ -82,7 +84,7 @@ import 'react-toastify/dist/ReactToastify.css';
         <div>
           <Helmet>  <title>  NestQuestHub  ||  Login    </title>         </Helmet>
               <div className="mx-auto w-1/2 mt-8 ">
-           <h1 className="text-4xl  font-bold text-center"  >Login to Your Account</h1> 
+           <h1 className="text-4xl animate__animated animate__rotateIn  font-bold text-center"  >Login to Your Account</h1> 
                 <form onSubmit={HandleLogin} className="card-body">    
         <div className="form-control">                    
           <label className="label">

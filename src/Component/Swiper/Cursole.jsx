@@ -34,19 +34,17 @@ const Cursole = () => {
                        
                      className='text-center  text-lg m-3   '  >Allow us to guide you through the innovative stress free approach in finding your dream Properties.</p>
                       <div className='  lg:flex gap-5  justify-center '   >
-                      <button  data-aos="fade-up-right"
-                       data-aos-duration="3000"
-                       className="btn btn-outline  btn-secondary">Get Start now</button>
-                      <button data-aos="fade-up-left"
-                       data-aos-duration="3000"
-                      className="btn btn-outline   btn-warning">learn more</button>
-
+                      <button  
+                       className="btn  animate__animated animate__zoomInDown  btn-outline  btn-secondary">Get Start now</button>
+                     
+                     <button  
+                       className="btn  animate__animated animate__zoomInUp   btn-info">Learn More</button>
                       </div>
             
               </div>
                  
             <div className='  lg:col-span-2' >
-             <Swiper
+             <Swiper 
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
