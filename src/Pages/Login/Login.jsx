@@ -4,11 +4,18 @@ import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
+import { MdEmail } from "react-icons/md";
+import { RiLockPasswordFill } from "react-icons/ri";
+import { ToastContainer,toast } from 'react-toastify';
 
-
+import 'react-toastify/dist/ReactToastify.css';
 
      const Login = () => {        
-        <Helmet> <title> Login </title> </Helmet>
+        <Helmet> <title> Login </title> </Helmet> 
+      
+
+
+
     const{login, googleLogin} = useContext(AuthContext);
 
     const Location = useLocation();
@@ -18,12 +25,7 @@ import { Helmet } from "react-helmet-async";
          const Navigate =  useNavigate();
     
     
-    const handlegoogleLogin=()=>{       
-    
-    
-    
-    
-    
+    const handlegoogleLogin=()=>{        
     
     googleLogin()
     .then(result =>  {
@@ -41,12 +43,14 @@ import { Helmet } from "react-helmet-async";
       console.log(email,password) 
       login(email,password)
       .then( Result=>  {
-       console.log(Result.user) 
+            console.log(Result.user) 
+            
     //// /// // //Navigate after login ////
        Navigate(  Location?.state ? Location.state : '/' )
     }     )
     .catch(error=>{
-     console.error(error)
+     console.error(error.message)  
+    toast.error('Your E-mail & Password Don`t match.Please try again')           
     })
     }   
     
@@ -56,18 +60,19 @@ import { Helmet } from "react-helmet-async";
 
     return (
         <div>
+          <Helmet>  <title>  NestQuestHub  ||  Login    </title>         </Helmet>
               <div className="mx-auto w-1/2 mt-8 ">
-           <h1 className="text-3xl  font-semibold text-center"  >Login here</h1> 
+           <h1 className="text-4xl  font-bold text-center"  >Login to Your Account</h1> 
                 <form onSubmit={HandleLogin} className="card-body">    
         <div className="form-control">                    
           <label className="label">
-            <span className="label-text">Put your Email</span>
+            <span className="label-text  flex "> <MdEmail  className="text-lg" />  Your Email</span>
           </label>
           <input type="email" placeholder="email"  name="email" className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Password</span>
+            <span className="label-text flex"> <RiLockPasswordFill className="text-lg" />  Password</span>
           </label>
           <input type="password" placeholder="password" name="password" className="input input-bordered" required />
           <label className="label">
@@ -75,7 +80,7 @@ import { Helmet } from "react-helmet-async";
           </label>
         </div>
         <div className="form-control mt-6">
-          <button className="btn  text-2xl btn-info">Login</button>
+          <button className="btn text-violet-500 text-2xl btn-info">Login</button>
         </div>
        
       </form>
@@ -88,6 +93,7 @@ import { Helmet } from "react-helmet-async";
             </div>
           
             </div>
+            <ToastContainer />
         </div>
     );
 };

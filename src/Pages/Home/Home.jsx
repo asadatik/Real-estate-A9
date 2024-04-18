@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <div  className="my-10"  >   
             <Helmet>
-             <title>Home </title>
+             <title> NestQuestHub / Home </title>
             </Helmet>
             <Cursole></Cursole>  
             <Estate></Estate>   
