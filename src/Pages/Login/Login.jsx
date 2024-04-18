@@ -16,21 +16,28 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 
-    const{login, googleLogin} = useContext(AuthContext);
+    const{login, googleLogin,GithubLogin} = useContext(AuthContext);
 
     const Location = useLocation();
     
          console.log("Location in the login page",Location);
     
          const Navigate =  useNavigate();
-    
+ const handleGitHubLogin=()=>{        
+      GithubLogin()
+          .then(result =>  {
+          console.log(result.user) 
+        
+          // Navigate(  Location?.state ? Location.state : '/' )
+          } )
+          }
     
     const handlegoogleLogin=()=>{        
     
     googleLogin()
     .then(result =>  {
     console.log(result.user) 
-    //// /// // //Navigate after login ////
+   
     Navigate(  Location?.state ? Location.state : '/' )
     } )
     }
@@ -102,7 +109,7 @@ import 'react-toastify/dist/ReactToastify.css';
           
             <div className="lg:flex  justify-evenly  "  >
             <button onClick={handlegoogleLogin}    className="btn lg:text-xl  btn-outline  btn-secondary  " > <FcGoogle />  Continue with  Google </button> 
-            <button className="btn lg:text-xl btn-outline btn-secondary " >  <ImGithub className="text-black"  />   Continue with  Git-Hub </button> 
+            <button  onClick={handleGitHubLogin} className="btn lg:text-xl btn-outline btn-secondary " >  <ImGithub className="text-black"  />   Continue with  Git-Hub </button> 
             </div>
           
             </div>

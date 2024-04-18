@@ -1,4 +1,4 @@
-import { GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../FireBase/FireBase.config";
 
@@ -44,17 +44,24 @@ const AuthProvider = ({ children }) => {
 
     return signOut(auth)
   }
-  // //////////////////////////////
+
   // Social provider 
   const GoogleProvider = new GoogleAuthProvider();
+  const GithubProvider = new GithubAuthProvider();
+
 
   const googleLogin = () => {
     return signInWithPopup(auth, GoogleProvider)
   }
-
-
   // ////////////////////////////
-  // observeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+ 
+
+  const GithubLogin = () => {
+    return signInWithPopup(auth ,GithubProvider)
+  }
+
+  // ////
+
 
   useEffect(() => {
     const Unsubscribe = onAuthStateChanged(auth, (Cuuretuser) => {
@@ -75,7 +82,9 @@ const AuthProvider = ({ children }) => {
     login,
     LogOut,
     googleLogin,
-    updatedUserProfile
+    updatedUserProfile,
+    GithubLogin
+  
   }
 
 

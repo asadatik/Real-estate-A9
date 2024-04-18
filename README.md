@@ -1,24 +1,21 @@
 # NestQuestHub 
 
+Find your dream home with ease!
 
+Live Site: [NestQuestHub ](   )
 
-## Features and Characteristics
+## Features and Highlights
 
-- *User Registration*: Register with us to gain exclusive access to prime real estate listings and personalized assistance.
-- *Google and GitHub Authentication*: Seamlessly register or log in using your Google or GitHub account for added convenience.
-- *Comprehensive Listings*: Explore a wide range of real estate listings, including houses, apartments, condos, and more, tailored to your preferences.
-- *Profile Customization*: Personalize your profile with your name and photo URL to make your DreamHome experience uniquely yours.
-- *Responsive Design*: Enjoy a smooth browsing experience across devices, whether you're on your desktop, tablet, or mobile phone.
+- *Personalized Recommendations*: Discover homes tailored to your unique preferences.
+- *Interactive Maps*: Explore property locations and nearby amenities with ease.
+- *Effortless Registration*: Sign up in seconds to unlock exclusive features and personalized assistance.
+- *Seamless Navigation*: Enjoy a smooth browsing experience on any device, from desktop to mobile.
+- *Visual Appeal*: Engage with stunning animations and intuitive design for an immersive experience.
 
-## NPM Package Used
+## NPM Packages Used
 
-- *react-router-dom*: Used for client-side routing to navigate between different pages in the React application.
-
-## Installation and Usage
-
-1. Clone this repository to your local machine.
-2. Navigate to the project directory.
-3. Run npm install to install dependencies.
-4. Start the development server with npm start.
-5. Access the application in your web browser at http://localhost:3000.
- eta edit kori de
+- [react-router-dom](https://www.npmjs.com/package/react-router-dom): For client-side routing in the application.
+- [animate.css](https://www.npmjs.com/package/animate.css): A library of ready-to-use animations for enhancing user interface.
+- [aos](https://www.npmjs.com/package/aos): Library to animate elements on scroll, providing a smooth scrolling experience.
+- [swiper](https://www.npmjs.com/package/swiper): Modern mobile touch slider with hardware accelerated transitions.
+- [react-toastify](https://www.npmjs.com/package/react-toastify), [react-tooltip](https://www.npmjs.com/package/react-tooltip), [react-helmet](https://www.npmjs.com/package/react-helmet), [react-icons](https://www.npmjs.com/package/react-icons): Additional React components for various functionalities.
