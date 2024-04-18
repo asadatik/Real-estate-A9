@@ -6,8 +6,8 @@ import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import { MdEmail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
-import { ToastContainer,toast } from 'react-toastify';
 
+import Swal from 'sweetalert2'
 import 'react-toastify/dist/ReactToastify.css';
 
      const Login = () => {        
@@ -42,15 +42,28 @@ import 'react-toastify/dist/ReactToastify.css';
       const password = from.get('password')  ; 
       console.log(email,password) 
       login(email,password)
-      .then( Result=>  {
+      .then( Result=>{
             console.log(Result.user) 
-            
-    //// /// // //Navigate after login ////
+            Swal.fire({
+              position: "center",
+              icon: "success",
+              title: "User Login Successfully",
+              showConfirmButton: false,
+              timer: 2500
+            });
+    
        Navigate(  Location?.state ? Location.state : '/' )
     }     )
     .catch(error=>{
      console.error(error.message)  
-    toast.error('Your E-mail & Password Don`t match.Please try again')           
+
+  
+       Swal.fire({
+      icon: "error",
+      title: "Oops...",
+       text: "Your E-mail & Password Don`t match.Please try again!",
+  
+});          
     })
     }   
     
@@ -93,7 +106,7 @@ import 'react-toastify/dist/ReactToastify.css';
             </div>
           
             </div>
-            <ToastContainer />
+          
         </div>
     );
 };

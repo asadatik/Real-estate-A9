@@ -2,18 +2,22 @@
 import { Link ,useNavigate,useLocation} from "react-router-dom";
 
 
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { Helmet } from "react-helmet-async";
+import { MdOutlineError } from "react-icons/md";
+import Swal from 'sweetalert2'
 
 
 
 
 
-
-
-const Register = () => {             
+const Register = () =>   {             
   <Helmet> <title> Register </title> </Helmet>
+
+        const [Error,setError] = useState('')
+
+
   const{ Creatuser , updatedUserProfile} = useContext(AuthContext);
     
   const Location = useLocation();
@@ -24,7 +28,8 @@ const Register = () => {
 
      
 
-    const HandleLogin=(e)=>{
+    
+    const HandleLogin = (e)=>{
         e.preventDefault()
         const from = new FormData(e.currentTarget);
                console.log(from)
@@ -32,22 +37,47 @@ const Register = () => {
           const Photo =  (from.get('photo'));
           const email             =  (from.get('email'));
           const  password =  (from.get('password'))
-          console.log(Name,Photo,email,password); 
-        /////// create User //// ///////////
+          console.log( typeof password); 
+             //  reset error 
+             setError('')
+        
+          if(password.length<6){
+            setError('Password should be at least 6 characters.')
+                    return;
+                }
+              else if ( !/^(?=.*[a-z])(?=.*[A-Z])$/.test(password) ){
+                setError('Your Password Should have at least One upperCase & LowerCase Characters');
+                return;
+              }
+       
+         
+
+        // create User ///
                Creatuser(email,password,Name,Photo) 
            .then( Result=>  {
+            Swal.fire({
+              position: "center",
+              icon: "success",
+              title: "Create User Successfully",
+              showConfirmButton: false,
+              timer: 2500
+            });
             updatedUserProfile(Name,Photo)
             Navigate(  Location?.state ? Location.state : '/' )    
               console.log(Result.user) 
            }     )
-           .catch(error=>{
-            console.error(error)
+           .catch((error)=>{
+               setError(error.message)
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+               text:"Something Wrong! please try again" ,
            })
-    } 
+    }   ) }
 
 
 
-    return (
+   return (
         <div className="mt-10" >
      
          
@@ -80,15 +110,18 @@ const Register = () => {
       <label className="label">
         <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
       </label>
+     
     </div>
+    {  Error && <p className=" text-xl lg:ml-10 flex gap-1 text-red-600 " ><MdOutlineError  className="text-2xl"/>{Error}</p>     }
     <div className="form-control mt-6">
-      <button className="btn btn-secondary">Register</button>       
+      <button className="btn text-2xl font-semibold btn-secondary">Register</button>       
     </div>
   </form>
-      <h1 className="text-center text-lg  "  >Already have an Account ? < Link to='/login' className="text-lime-600" >Login</Link></h1>
+      <h1 className="text-center text-xl  "  >Already have an Account ? < Link to='/login' className="text-lime-600" >Login</Link></h1>
  </div>
     </div>
     );
 };
 
-export default Register;
+  
+   export default Register ;
