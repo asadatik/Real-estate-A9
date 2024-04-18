@@ -61,9 +61,6 @@ const AuthProvider = ({ children }) => {
 
       setuser(Cuuretuser)
       setLoading(false)
-
-
-
     });
     return () => {
       Unsubscribe()

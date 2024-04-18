@@ -18,8 +18,13 @@ const Estate = () => {
                console.log(Home)  
     return (
         <div  >
-             <h1 className="text-center my-5 bg-sky-500 rounded-t-lg py-2 text-4xl font-semibold "  >Explore Your Dream</h1>
-             <div  className="  grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 " >
+               <div className=" my-5 bg-sky-500 rounded-t-lg py-2" >
+               <h1 
+                 data-aos="zoom-in"
+              data-aos-duration="2000"
+                className="text-center text-4xl font-semibold text-white "  >Explore Your Dream</h1>
+               </div>
+                <div  className="  grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 " >
 
                      
                      {

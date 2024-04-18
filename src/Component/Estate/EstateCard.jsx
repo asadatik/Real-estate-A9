@@ -6,7 +6,11 @@ const EstateCard = ( { SingleHome }) => {
 
           const{image,id,estate_title,status,description} = SingleHome;
     return (
-        <div className="card card-compact  p-5  border bg-base-100 shadow-xl">  
+        <div 
+        data-aos="flip-up"
+          data-aos-duration="2000"
+      
+        className="card card-compact  p-5  border bg-base-100 shadow-xl">  
         <figure><img  className="h-52 rounded-t-xl  lg:w-full" src={image} alt="Shoes" /></figure>
         <div className="card-body">
           <div className="flex gap-5   "  >

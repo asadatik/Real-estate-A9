@@ -100,9 +100,9 @@ import 'react-toastify/dist/ReactToastify.css';
           <h1 className="text-center mb-3 text-md "  >Don`t have an Account ? <Link to='/register' className="text-lime-600" >Create an account</Link></h1>
                   
           
-            <div className="  lg:flex  justify-evenly  "  >
-            <button onClick={handlegoogleLogin}    className="btn text-xl btn-outline btn-secondary " > <FcGoogle />  Continue with  Google </button> 
-            <button className="btn text-xl btn-outline btn-secondary " >  <ImGithub className="text-black"  />   Continue with  Git-Hub </button> 
+            <div className="lg:flex  justify-evenly  "  >
+            <button onClick={handlegoogleLogin}    className="btn lg:text-xl  btn-outline  btn-secondary  " > <FcGoogle />  Continue with  Google </button> 
+            <button className="btn lg:text-xl btn-outline btn-secondary " >  <ImGithub className="text-black"  />   Continue with  Git-Hub </button> 
             </div>
           
             </div>
